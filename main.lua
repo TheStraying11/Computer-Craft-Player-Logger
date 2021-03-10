@@ -1,3 +1,7 @@
-local d = peripheral.wrap("playerDetector_0")
+local d = peripheral.wrap("top")
 
-print(d.getPlayersInRange(1000000))
+for k, v in pairs(d.getPlayersInRange(1000000)) do
+  print(string.format("%s : %s", k, v))
+end
+
+os.sleep(10)
